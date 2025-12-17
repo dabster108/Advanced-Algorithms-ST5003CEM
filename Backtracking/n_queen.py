@@ -1,3 +1,4 @@
+#exam - solve code only 
 class Nqueen:
     def solveNqueen(self,n):
         board =[['.' for _ in range(n)] for _ in range(n)]
@@ -43,6 +44,18 @@ class Nqueen:
                 return False
             i += 1                        
             j -= 1
+
+        #checking diagonal downward right
+        i = row
+        j = col
+        while i < n and j < n:
+            if board[i][j] == 'Q':
+                return False
+            i += 1
+            j += 1
+
+        return True     
+
             
                 
 
