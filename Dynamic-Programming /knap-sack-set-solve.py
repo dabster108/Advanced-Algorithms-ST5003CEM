@@ -1,3 +1,4 @@
+#Sets method 
 profits = [1, 2, 5, 6]
 weights = [2, 3, 4, 5]
 capacity = 8
