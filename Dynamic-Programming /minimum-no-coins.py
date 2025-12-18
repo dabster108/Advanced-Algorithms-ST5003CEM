@@ -17,8 +17,8 @@ def coin_change(coins, target):
     return dp[n][target] if dp[n][target] != INF else -1
 
 if __name__ == "__main__":
-    coins = [1, 2, 5]
-    target = 11
+    coins = [1, 2,5]
+    target = 6
 
     result = coin_change(coins, target)
 
