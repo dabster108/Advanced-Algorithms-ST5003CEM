@@ -18,3 +18,8 @@ g = Graph(6)
 g.addEdge(0,1)
 g.addEdge(0,2)
 g.printGraph()
+
+
+
+
+# TRAVERSE - THING 
