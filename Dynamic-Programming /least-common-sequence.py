@@ -9,7 +9,6 @@ def lcs(s1, s2):
             else:
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
 
-    # The length of LCS is in dp[len(s1)][len(s2)]
     return dp[len(s1)][len(s2)]
 
 # Example usage
