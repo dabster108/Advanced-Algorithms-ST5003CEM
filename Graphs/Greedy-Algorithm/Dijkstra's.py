@@ -43,12 +43,8 @@ class Graph:
             visited[minvertex] = True
             for j in range(self.v):
                 if self.matrix[minvertex][j] != 0 and not visited[j]:
-                    if dist[minvertex] + self.matrix[minvertex][j] < dist[j]:
-                        dist[j] = dist[minvertex] + self.matrix[minvertex][j]
-                        prevpath[j] = minvertex
-                        
-# algorithm to find path
-
+                    prevpath[j] = minvertex
+                    
         
 
         
