@@ -13,13 +13,10 @@ def bfs_cycle_detection(self, source):
 
         for v in range(self.v):
             if self.matrix[u][v] != 0:
-                # If not visited, push to queue
                 if not visited[v]:
                     visited[v] = True
                     parent[v] = u
                     q.append(v)
-
-                # If visited and NOT parent → cycle
                 elif parent[u] != v:
                     return True
 
