@@ -1,12 +1,13 @@
-from coollections import deque
+from collections import deque
+
 
 class Graph:
     def __init__(self,v):
         self.matrix = [[0 for _ in range(v)] for _ in range(v)]
         self.v = v
 
-    def addEdge(self,source,destination):
-        self.matrix[source][destination] = 1
+    def addEdge(self,source,destination,w):
+        self.matrix[source][destination] = w
         self.matrix[destination][source] = 1
 
     def printGraph(self):
@@ -31,6 +32,41 @@ class Graph:
                     q.append(j)
                     visited[j] = True
 
+
+    def dijakstra(self,source,destination):
+        dist = [float('inf')]*self.v
+        prevpath = [-1]*self.v
+        visited = [False]*self.v
+        dist[source] = 0
+        for i in range(self.v):
+            minvertex = self.findMinVertex(dist,visited)
+            visited[minvertex] = True
+            for j in range(self.v):
+                if self.matrix[minvertex][j] != 0 and not visited[j]:
+                    if dist[minvertex] + self.matrix[minvertex][j] < dist[j]:
+                        dist[j] = dist[minvertex] + self.matrix[minvertex][j]
+                        prevpath[j] = minvertex
+                        
+# algorithm to find path
+
+        
+
+        
+    def findMinVertext(self,dist,visited):
+        #we give max value to minimum 
+        min = -1
+        for i in range(len(dist)):
+           if((min == -1 or dist[i] < min) and not visited[i]):
+                min = dist[i]
+        return min 
+
+    
+
+            
+
+    
+
+
     def dfs(self,source):
         visited = [False]*self.v
         self.depthFirstSearch(visited,source)
@@ -43,11 +79,18 @@ class Graph:
                 self.depthFirstSearch(visited,j)
                 
 
-
-
         
 
-
+g = Graph(6)
+g.addEdge(0,1,10)
+g.addEdge(0,5,20)
+g.addEdge(1,2,3)
+g.addEdge(1,4,7)
+g.addEdge(2,3,2)
+g.addEdge(3,4,10)
+g.addEdge(3,5,15)
+g.addEdge(4,5,4)
+g.printGraph()
 
 
 
