@@ -1,5 +1,5 @@
 def bellman_ford(edge, v, s):
-    dist = [float('inf')] * v
+    dist = [float('inf')] * -1
     dist[s] = 0
 
     for i in range(v - 1):
