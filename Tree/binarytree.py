@@ -1,3 +1,4 @@
+# Normal Construction of Preorder Post Order Inorder Traversal 
 class TreeNode:
     def __init__(self,data):
         self.left  = None 
@@ -10,6 +11,17 @@ class TreeNode:
         self.preorder(root.left)
         self.preorder(root.right)
 
+    def postorder(self,root):
+        print(root.data)
+        self.postorder(root.left)
+        self.postorder(root.right)
+
+    def inorder(self,root):
+        if root == None:
+            return
+        self.inorder(root.left)
+        print(root.data)
+        self.inorder(root.right)
 
 
 
