@@ -13,4 +13,3 @@ This repository contains all the lab sessions and practical exercises for the Ad
 
 ---
 
-Feel free to explore each folder for code samples and solutions to lab exercises. This collection is intended to support learning and revision for Advanced Algorithms.
