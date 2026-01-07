@@ -14,7 +14,7 @@ class MinimumSpanningTree:
             edgecounter += 1
             u = e[0]
             v = e[1]
-            w = e[2]
+            w = e[2] # edge 
             uabsroot = self.find(u)
             vabsroot = self.find(v)
             if uabsroot == vabsroot:
