@@ -5,8 +5,16 @@ class TreeNode:
         self.data = data 
 
 
+    def preorder(self,root):
+        print(root.data)
+        self.preorder(root.left)
+        self.preorder(root.right)
 
 
 
-root = TreeNode()
 
+root = TreeNode(10)
+root.left = TreeNode(20)
+root.right = TreeNode(30)
+root.left.left = TreeNode(40)
+root.left.right = TreeNode(50)
