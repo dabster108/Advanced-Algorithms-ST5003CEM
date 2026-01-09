@@ -16,7 +16,7 @@ class TreeNode:
         self.postorder(root.left)
         self.postorder(root.right)
 
-    def inorder(self,root):
+    def inorder(self,root): 
         if root == None:
             return
         self.inorder(root.left)
