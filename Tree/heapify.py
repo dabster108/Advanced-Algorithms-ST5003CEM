@@ -21,3 +21,9 @@ class Heapify:
             return largest
         else:
             return i
+
+    def build_heap(self, a, n):
+        i = n // 2
+        while i >= 0:
+            self.heapify(a, n, i)
+            i -= 1
